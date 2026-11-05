@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>V-TRY-021 Virtual Try-On</title>
+    <link rel="stylesheet" href="styleTE.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">V-TRY</a>
+
+    <nav>
+        <a href="Firstpg.html">Home</a>
+        <a href="tryOn.html" class="active">Try-On</a>
+        <a href="explore.html">Explore</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1>Virtual <span>Try-On</span></h1>
+    <p class="subtitle">
+        Upload your photo and your favorite clothing to get started.
+    </p>
+
+    <div class="upload-grid">
+
+        <section class="panel">
+            <h2>01. Your Photo</h2>
+            <p>Upload a clear photo of yourself.</p>
+
+            <label class="upload-box" for="personImage">
+                <img id="personPreview" alt="Person preview" hidden>
+                <span id="personPlaceholder">
+                    <strong>+ Upload Your Photo</strong>
+                    <small>JPG, PNG or WEBP</small>
+                </span>
+            </label>
+
+            <input type="file" id="personImage"
+                   accept="image/png,image/jpeg,image/webp">
+        </section>
+
+        <section class="panel">
+            <h2>02. Clothing Image</h2>
+            <p>Choose the garment you want to try.</p>
+
+            <label class="upload-box" for="clothesImage">
+                <img id="clothesPreview" alt="Clothing preview" hidden>
+                <span id="clothesPlaceholder">
+                    <strong>+ Upload Clothing</strong>
+                    <small>JPG, PNG or WEBP</small>
+                </span>
+            </label>
+
+            <input type="file" id="clothesImage"
+                   accept="image/png,image/jpeg,image/webp">
+        </section>
+
+    </div>
+
+    <button class="main-btn" id="generateBtn">
+        Generate Try-On
+    </button>
+
+    <p id="message" class="message" role="status" aria-live="polite">
+        Upload both images, then generate your outfit preview.
+    </p>
+
+    <section id="resultPanel" class="panel result-panel" hidden>
+        <h2>Your AI Try-On Result</h2>
+        <img id="resultImage" alt="AI-generated virtual try-on result">
+        <a id="downloadResult" class="main-btn" download="vtry-result.png">Download Result</a>
+    </section>
+
+    <a class="back-link" href="explore.html">Explore Clothing Styles →</a>
+</main>
+
+<script src="tryOn.js"></script>
+</body>
+</html>
